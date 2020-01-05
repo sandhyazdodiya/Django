@@ -1,0 +1,113 @@
+{% extends 'base.html' %} {% block title %}Add Participants{% endblock %}{% block content %}
+
+<div class="pageTitle">
+    <div class="title">
+        <span>Add Participants</span>
+    </div>
+    <div class="btn">
+        <a href="{% url 'participants_list' %}"><button>BACK
+        </button>
+        </a>
+    </div>
+</div>
+{% if form.errors %} {% for field in form %} {% for error in field.errors %}
+<div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %} {% endfor %} {% for error in form.non_field_errors %}
+<div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %} {% endif %}
+<div class="pageData">
+    <div class="list-table-container">
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Last Name</p>
+                    {{form.last_name}}
+
+                </div>
+                <div class="col-md-4">
+                    <p>First Name</p>
+                    {{form.first_name}}
+                </div>
+                <div class="col-md-4">
+                    <p>DOC #</p>
+                    {{form.doc_no}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Correctional facility</p>
+                    {{form.correctional_facility}}
+                </div>
+                <div class="col-md-4">
+                    <p>Home address</p>
+                    {{form.home_address}}
+                </div>
+                <div class="col-md-4">
+                    <p>City</p>
+                    {{form.city}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>State</p>
+                    {{form.state}}
+                </div>
+                <div class="col-md-4">
+                    <p>Zip code</p>
+                    {{form.zip_code}}
+                </div>
+                <div class="col-md-4">
+                    <p>Phone</p>
+                    {{form.phone}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Email</p>
+                    {{form.email}}
+                </div>
+                <div class="col-md-4">
+                    <p>Education</p>
+                    {{form.education}}
+                </div>
+                <div class="col-md-4">
+                    <p>Certificate</p>
+                    {{form.certificate}}
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Work area</p>
+
+                    {{form.work_area}}
+                </div>
+                <div class="col-md-4">
+                    <p>Job status</p>
+                    {{form.job_status}}
+                </div>
+                <div class="col-md-4">
+                    <p>Hired date</p>
+
+                    {{form.hired_date}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"> <input type="submit" value="Add" class="add-form submit-btn"></div>
+                <div class="col-md-4"></div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

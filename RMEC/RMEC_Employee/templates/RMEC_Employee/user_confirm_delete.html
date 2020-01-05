@@ -1,0 +1,20 @@
+ {% extends 'base.html' %} {% block title %}Delete Superuser{% endblock %}{% block content %}
+<div class="pageTitle">
+    <div class="title">
+        <span>Delete Superuser</span>
+    </div>
+    <div class="btn">
+        <a href="{% url 'users' %}"><button>BACK
+            </button>
+            </a>
+    </div>
+</div>
+<div class="pageData">
+    <div class="list-table-container">
+        <form method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ user.email }}"?</p>
+            <input type="submit" value="Confirm" class="submit-btn">
+        </form>
+    </div>
+</div>
+{% endblock %}

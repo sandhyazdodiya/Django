@@ -1,0 +1,102 @@
+/* body {
+    border: 2px solid red !important;
+} */
+
+#send {
+    visibility: hidden;
+    height: 0;
+}
+
+.input-label {
+    text-transform: capitalize;
+}
+
+td {
+    border-bottom: none;
+}
+
+#form-submit {
+    color: #fff;
+    padding: 10px 20px;
+    background-color: #79aec8;
+    border-radius: 19px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#form-submit:hover {
+    background-color: #417690;
+}
+
+.import-export-btn li {
+    list-style: none;
+    width: 60px;
+    margin: 17px 0;
+    padding: 9px 20px;
+    background-color: #79aec8;
+    text-align: center;
+    border-radius: 29px;
+}
+
+.import-export-btn li:hover {
+    background-color: #417690;
+}
+
+.import-export-btn li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.import-export-btn {
+    display: inline-block;
+}
+
+.filtered .actions {
+    margin-right: 0 !important;
+    border-right: none;
+}
+
+.change-list .filtered .results,
+.change-list .filtered .paginator,
+.filtered #toolbar,
+.filtered div.xfull {
+    margin-right: 0 !important;
+    width: auto;
+}
+
+#changelist-filter {
+    display: none !important;
+}
+
+.download-template {
+    display: inline-block;
+}
+
+.vTextField {
+    text-transform: uppercase;
+}
+
+
+/* #header {
+    display: none;
+} */
+
+.breadcrumbs {
+    display: none;
+}
+
+.colM h1 {
+    display: none;
+}
+
+.submit-row input.default {
+    float: right;
+    border: none;
+    font-weight: 400;
+    background: #fdaa28;
+}
+
+#header {
+    background: #fdaa28 !important;
+}

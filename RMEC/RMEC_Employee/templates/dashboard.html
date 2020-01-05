@@ -1,0 +1,52 @@
+{% extends 'base.html' %}{% block title %}Dashboard{% endblock %} {% block content %} {{order}}
+<div class="pageData">
+    <h1>Dashboard data Visualization will be coming soon......</h1>
+    <div class="row">
+        <div class="col-md-4 dashboardOuterContainer">
+            <a href="{% url 'participants_list' %}">
+
+                <div class="dashboardInnerContainer">
+                    <div class="text-left">
+
+                        <p>Total Participants</p>
+                        <span>{{RMEC_Employee_count}}</span>
+
+                    </div>
+
+                </div>
+            </a>
+
+
+        </div>
+        <div class="col-md-4 dashboardOuterContainer">
+            <a href="{% url 'IndustrypartnerlistView' %}">
+                <div class="dashboardInnerContainer">
+                    <div class="text-left">
+
+                        <p>Total Industry Partner</p>
+                        <span>{{IndustryPartner_count}}</span>
+
+                    </div>
+                </div>
+            </a>
+
+
+
+        </div>
+        <div class="col-md-4 dashboardOuterContainer">
+            <a href="{% url 'participants_list' %}">
+                <div class="dashboardInnerContainer">
+                    <div class="text-left">
+
+                        <p>Total hired</p>
+                        <span>{{RMEC_Employee_hired}}</span>
+
+                    </div>
+                </div>
+            </a>
+
+
+        </div>
+    </div>
+
+    {% endblock %}

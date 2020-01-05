@@ -1,0 +1,45 @@
+{% extends 'base.html' %}{% block title %}Export{% endblock %} {% block content %} {{order}}
+<div class="pageData">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+        <fieldset class="module aligned">
+
+            <div class="form-row">
+
+
+                <label for="id_file_format">Format:</label>
+
+                <select name="file_format" required="" id="id_file_format">
+                <option value="" selected="">---</option>
+              
+                <option value="0">csv</option>
+              
+                <option value="1">xls</option>
+              
+                <!-- <option value="2">xlsx</option>
+              
+                <option value="3">tsv</option>
+              
+                <option value="4">ods</option>
+              
+                <option value="5">json</option>
+              
+                <option value="6">yaml</option>
+              
+                <option value="7">html</option> -->
+              
+              </select>
+
+
+            </div>
+
+        </fieldset>
+
+        <div class="submit-row">
+            <input type="submit" class="default" value="Submit">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

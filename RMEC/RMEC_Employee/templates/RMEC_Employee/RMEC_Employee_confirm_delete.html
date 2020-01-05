@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %}Delete Participants{% endblock %}{% block content %}
+<div class="pageTitle">
+    <div class="title">
+        <span>Delete Participants</span>
+    </div>
+</div>
+<div class="pageData">
+    <div class="list-table-container">
+        <form method="post">{% csrf_token %}
+            <p>Are you sure you want to delete "{{ object.first_name }}"?</p>
+            <input type="submit" value="Confirm" class="submit-btn">
+        </form>
+    </div>
+</div>
+{% endblock %}

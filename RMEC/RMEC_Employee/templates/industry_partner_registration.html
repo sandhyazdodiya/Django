@@ -1,0 +1,95 @@
+{% extends 'login-base.html' %} {% block title %}Signup{% endblock %}{% block content %}
+<div class="register-block">
+
+    <div class="list-table-container">
+        <h1>Registration</h1>
+        {% if form.errors %}
+        <div class="alert alert-error">
+            <h4>Please fix the following errors</h4>
+            <ul>
+                {% for field in form %} {% if field.errors %} {% for error in field.errors %}
+                <li><a href="#id_{{ field.name }}" class="error">{{ error|escape }}</a></li>
+                {% endfor %} {% endif %} {% endfor %}
+            </ul>
+            {% if form.non_field_errors %} {{ form.non_field_errors }} {% endif %}
+        </div>
+        {% endif %}
+        <form method="post" action="" class="rform">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Username:</p>
+
+
+                </div>
+                <div class="col-md-6">
+                    <p>Email</p>
+                    <input class="form-control" type="email" name="email" maxlength="254" required id="from-bind">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>First Name:</p>
+                    <input class="form-control" type="text" name="first_name" maxlength="30" id="id_first_name">
+                </div>
+                <div class="col-md-6">
+                    <p>Last Name:</p>
+                    <input class="form-control" type="text" name="last_name" maxlength="30" id="id_last_name">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Business Name</p>
+                    <input class="form-control" type="text" name="business_name" maxlength="200" id="id_business_name">
+                </div>
+                <div class="col-md-6">
+                    <p>Business Address</p>
+                    <input class="form-control" type="text" name="business_address" maxlength="200" id="id_business_address">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>City</p>
+                    <input class="form-control" type="text" name="city" maxlength="200" id="id_city">
+                </div>
+                <div class="col-md-6">
+                    <p>State</p>
+                    <input class="form-control" type="text" name="state" maxlength="200" id="id_state">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Phone</p>
+                    <input class="form-control" type="number" name="phone" id="id_phone">
+                </div>
+                <div class="col-md-6">
+                    <p>ZipCode</p>
+                    <input class="form-control" type="number" name="zip_code" id="id_zip_code">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+
+                    <input type="hidden" name="password1" required id="set_password1" value="eleorex@123">
+                </div>
+                <div class="col-md-6">
+
+                    <input type="hidden" name="password2" required id="set_password2" value="eleorex@123">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"> <button type="submit" class=" submit-btn signup">Sign up</button></div>
+                <div class="col-md-4"></div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}

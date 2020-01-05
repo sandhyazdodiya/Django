@@ -1,0 +1,222 @@
+{% extends 'base.html' %} {% block title %}Add Participants{% endblock %}{% block content %}
+<div class="pageTitle">
+    <div class="title">
+        <span>Add Participants</span>
+    </div>
+    <div class="btn">
+        <a href="#"><button>ADD PARTICIPANTS
+        </button>
+        </a>
+    </div>
+</div>
+<div class="pageData">
+    <div class="list-table-container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Last Name</p>
+                    <input class="form-control" type="text" name="last_name" maxlength="200" id="id_last_name" placeholder="Enter Lastname">
+                </div>
+                <div class="col-md-4">
+                    <p>First Name</p>
+                    <input class="form-control" type="text" name="first_name" maxlength="200" id="id_first_name" placeholder="Enter Firstname">
+                </div>
+                <div class="col-md-4">
+                    <p>DOC #</p>
+                    <input class="form-control" type="text" name="doc_no" value="170" id="id_doc_no" placeholder="Enter DOC #">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Correctional facility</p>
+                    <input class="form-control" type="text" name="correctional_facility" maxlength="100" id="id_correctional_facility" placeholder="Enter Correctional facility">
+                </div>
+                <div class="col-md-4">
+                    <p>Home address</p>
+                    <input class="form-control" type="text" name="home_address" maxlength="200" id="id_home_address" placeholder="Enter Home address">
+                </div>
+                <div class="col-md-4">
+                    <p>City</p>
+                    <input class="form-control" type="text" name="city" maxlength="200" id="id_city" placeholder="Enter City">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>State</p>
+                    <select class="form-control" name="state" id="id_state">
+                            <option value="" selected>---------</option>
+                          
+                            <option value="AL">AL</option>
+                          
+                            <option value="AK">AK</option>
+                          
+                            <option value="AZ">AZ</option>
+                          
+                            <option value="AR">AR</option>
+                          
+                            <option value="CA">CA</option>
+                          
+                            <option value="CO">CO</option>
+                          
+                            <option value="CT">CT</option>
+                          
+                            <option value="DE">DE</option>
+                          
+                            <option value="FL">FL</option>
+                          
+                            <option value="GA">GA</option>
+                          
+                            <option value="HI">HI</option>
+                          
+                            <option value="ID">ID</option>
+                          
+                            <option value="IL">IL</option>
+                          
+                            <option value="IA">IA</option>
+                          
+                            <option value="KS">KS</option>
+                          
+                            <option value="KY">KY</option>
+                          
+                            <option value="LA">LA</option>
+                          
+                            <option value="ME">ME</option>
+                          
+                            <option value="MN">MN</option>
+                          
+                            <option value="MS">MS</option>
+                          
+                            <option value="MO">MO</option>
+                          
+                            <option value="KS">KS</option>
+                          
+                            <option value="KY">KY</option>
+                          
+                            <option value="LA">LA</option>
+                          
+                            <option value="ME">ME</option>
+                          
+                            <option value="MT">MT</option>
+                          
+                            <option value="NE">NE</option>
+                          
+                            <option value="NV">NV</option>
+                          
+                            <option value="NH">NH</option>
+                          
+                            <option value="NJ">NJ</option>
+                          
+                            <option value="NM">NM</option>
+                          
+                            <option value="NY">NY</option>
+                          
+                            <option value="NC">NC</option>
+                          
+                            <option value="ND">ND</option>
+                          
+                            <option value="OH">OH</option>
+                          
+                            <option value="OK">OK</option>
+                          
+                            <option value="OR">OR</option>
+                          
+                            <option value="PA">PA</option>
+                          
+                            <option value="RI">RI</option>
+                          
+                            <option value="SC">SC</option>
+                          
+                            <option value="SD">SD</option>
+                          
+                            <option value="TN">TN</option>
+                          
+                            <option value="TX">TX</option>
+                          
+                            <option value="UT">UT</option>
+                          
+                            <option value="VT">VT</option>
+                          
+                            <option value="VA">VA</option>
+                          
+                            <option value="WA">WA</option>
+                          
+                            <option value="WV">WV</option>
+                          
+                            <option value="AS">AS</option>
+                          
+                            <option value="DC">DC</option>
+                          
+                            <option value="FM">FM</option>
+                          
+                            <option value="GU">GU</option>
+                          
+                            <option value="MH">MH</option>
+                          
+                            <option value="MP">MP</option>
+                          
+                            <option value="PW">PW</option>
+                          
+                            <option value="PR">PR</option>
+                          
+                            <option value="VI">VI</option>
+                          
+                          </select>
+                </div>
+                <div class="col-md-4">
+                    <p>Zip code</p>
+                    <input class="form-control" type="text" name="zip_code" maxlength="200" id="id_zip_code" placeholder="Enter Zip code">
+                </div>
+                <div class="col-md-4">
+                    <p>Phone</p>
+                    <input class="form-control" type="text" name="phone" maxlength="15" id="id_phone" placeholder="Enter Phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Email</p>
+                    <input class="form-control" type="email" name="email" maxlength="200" id="id_email" placeholder="Enter Email">
+                </div>
+                <div class="col-md-4">
+                    <p>Education</p>
+                    <select class="form-control" name="education" id="id_education">
+                            <option value="" selected>---------</option>
+                          
+                            <option value="GED">GED</option>
+                          
+                            <option value="HIGH SCHOOL DIPLOMA">HIGH SCHOOL DIPLOMA</option>
+                          
+                            <option value="COLLEGE DEGREE">COLLEGE DEGREE</option>
+                          
+                          </select>
+                </div>
+                <div class="col-md-4">
+                    <p>Certificate</p>
+                    <input class="form-control" type="text" name="certificate" maxlength="200" id="id_certificate">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Work area</p>
+                    <input class="form-control" type="text" name="work_area" maxlength="200" id="id_work_area" placeholder="Enter Work area">
+                </div>
+                <div class="col-md-4">
+                    <p>Job status</p>
+                    <input class="form-control" type="checkbox" name="job_status" id="id_job_status">
+                </div>
+                <div class="col-md-4">
+                    <p>Hired date</p>
+                    <input class="form-control" type="date" name="hired_date" id="id_hired_date" placeholder="Choose Date">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"> <input type="submit" value="Save" class="submit-btn"></div>
+                <div class="col-md-4"></div>
+            </div>
+
+        </form>
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %} {% block title %}Edit Profile{% endblock %}{% block content %} {% if user.is_authenticated %}
+<div class="pageTitle">
+    <div class="title">
+        <span> Edit Profile </span>
+    </div>
+
+</div>
+<div class="user-form">
+    <div class="list-table-container">
+
+        <form method="post" class="update_form">{% csrf_token %}
+            <div class="row">
+                <div class="col-md-6">
+                    <p>First Name</p>
+                    {{form.first_name}}
+                </div>
+                <div class="col-md-6">
+                    <p>Last Name</p>
+                    {{form.last_name}}
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Username</p>
+                    {{form.username}}
+                </div>
+                <div class="col-md-6">
+                    <p>Email id</p>
+                    {{form.email}}
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Business Name</p>
+                    {{form.business_name}}
+                </div>
+                <div class="col-md-6">
+                    <p>Business Address</p>
+                    {{form.business_address}}
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>City</p>
+                    {{form.city}}
+                </div>
+                <div class="col-md-6">
+                    <p>State</p>
+                    {{form.state}}
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Phone</p>
+                    {{form.phone}}
+                </div>
+                <div class="col-md-6">
+                    <p>Zipcode</p>
+                    {{form.zip_code}}
+                </div>
+
+            </div>
+
+            <input type="submit" value="Update" class="submit-btn">
+        </form>
+
+    </div>
+</div>
+
+
+{% endif %} {% endblock %}

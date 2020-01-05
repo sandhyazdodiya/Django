@@ -1,0 +1,149 @@
+ {% if user.is_authenticated %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}" />
+    <script src="{% static '/js/script.js' %}"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <div id="sidebar" class="leftsidebar">
+            {% block sidebar %}
+            <div class="Logo_Sidebar">
+
+                <a><img src="{% static '/img/login_logo.png' %}" class="icon"></a>
+            </div>
+            <div class="menu">
+                <ul class="list">
+                    {% if request.user.is_superuser %}
+                    <li class="">
+                        <a href="{% url 'dashboard' %}">
+                            <span class="menu-img">
+                               <img src="{% static '/img/1.png' %}" >
+                            </span>
+                            <span class="menu-text"> Dashboard</span>
+
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="{% url 'users' %}">
+                            <span class="menu-img">
+                            <img src="{% static '/img/2.png' %}">
+                            </span>
+                            <span class="menu-text"> Users</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="">
+                        <a href="">
+                            <span class="menu-img">
+                            <img src="{% static '/img/3.png' %}" >
+                            </span>
+                            <span class="menu-text"> Question Bank</span>
+                        </a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="">
+                            <span class="menu-img">
+                            <img src="{% static '/img/4.png' %}" >
+                            </span>
+                            <span class="menu-text"> Vacancies</span>
+                        </a>
+                    </li> -->
+
+                    <li class="">
+                        <a href="{% url 'participants_list' %}">
+                            <span class="menu-img">
+                            <img src="{% static '/img/5.png' %}" >
+                            </span>
+                            <span class="menu-text"> Participants</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'IndustrypartnerlistView' %}">
+                            <span class="menu-img">
+                            <img src="{% static '/img/6.png' %}" >
+                           </span>
+                            <span class="menu-text">Industry Partners</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'settings' %}">
+                            <span class="menu-img">
+                              <img src="{% static '/img/7.png' %}" >
+                             </span>
+                            <span class="menu-text"> Settings</span>
+                        </a>
+                    </li>
+                    {% endif %} {% if not request.user.is_superuser %}
+                    <li class="">
+                        <a href="{% url 'not_hired' %}">
+                            <span class="menu-img">
+                                  <img src="{% static '/img/5.png' %}" >
+                                 </span>
+                            <span class="menu-text"> Participants</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'hiredby_partner' %}">
+                            <span class="menu-img">
+                                          <img src="{% static '/img/5.png' %}" >
+                                         </span>
+                            <span class="menu-text"> Hired By Me</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="">
+                            <span class="menu-img">
+                                      <img src="{% static '/img/5.png' %}" >
+                                     </span>
+                            <span class="menu-text"> My Account</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+            {% endblock %}
+        </div>
+
+        <div id="content">
+            <div class="navbar-user">
+
+                <a href="">
+                    <div class="User_Add"><span><i class="fa fa-user"></i>Welcome {{request.user.first_name}} {{request.user.last_name}} !!</span></div>
+
+                </a>
+                <div class="logout">
+                    <a href="{% url 'logout_request' %}">
+                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+
+</html>
+{% endif %}

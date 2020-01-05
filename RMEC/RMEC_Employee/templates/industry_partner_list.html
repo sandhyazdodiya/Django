@@ -1,0 +1,57 @@
+{% extends 'base.html' %}{% block title %}Industry Partners{% endblock %} {% block content %} {% if user.is_authenticated %}
+<div class="pageTitle">
+    <div class="title">
+        <span>Industry Partner Maintenance</span>
+    </div>
+    <!-- <div class="btn">
+        <a href=""><button>Add Superuser</button>
+        </a>
+    </div> -->
+</div>
+
+<div class="pageData">
+    <div class="list-table-container">
+        <table class="list-table">
+            <thead class="">
+                <tr>
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in object_list %}
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.email }}</td>
+
+                    <td>
+                        <a href="{% url 'IndustrypartnerUpdate' user.id %}"><i class="fa fa-pencil-square-o"></i></span></a>
+                        <a href="{% url 'IndustrypartnerDelete' user.id %}"><i class="fa fa-trash-o"></i></a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% if is_paginated %}
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-angle-left"></i></a>
+                {% endif %}
+    
+                <span class="current">
+                     {{ page_obj.number }} 
+                </span> {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-angle-right"></i></a> {% endif %}
+            </span>
+        </div>
+        {% endif %}</div>
+
+</div>
+
+{% else %} {% endif %} {% endblock %}

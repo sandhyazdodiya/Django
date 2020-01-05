@@ -1,0 +1,754 @@
+/* cyrillic-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu72xKOzY.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* greek-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+
+/* greek */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+/* cyrillic-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCRc4EsA.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+/* cyrillic */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfABc4EsA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+
+/* greek-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCBc4EsA.woff2) format('woff2');
+    unicode-range: U+1F00-1FFF;
+}
+
+
+/* greek */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBxc4EsA.woff2) format('woff2');
+    unicode-range: U+0370-03FF;
+}
+
+
+/* vietnamese */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfCxc4EsA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+
+
+/* latin-ext */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+/* latin */
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.login {
+    height: 100vh;
+    background-color: #fdaa28;
+    padding-top: 7%;
+}
+
+.register-button-block p {
+    color: #fff;
+}
+
+.register-button-block {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.register-button-block a {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    background-color: #FDAA28;
+    border-radius: 27px;
+    color: #fff;
+    text-decoration: none !important;
+}
+
+.thankyou-block {
+    text-align: center;
+}
+
+.rform p {
+    margin-bottom: 0;
+}
+
+.signup {
+    width: 100%;
+    font-size: 20px !important;
+}
+
+.list-table-container h1 {
+    text-align: center;
+}
+
+.register-block {
+    background-color: #fdaa28;
+    padding: 4% 20%;
+}
+
+.loginFormContainer {
+    width: 390px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 35px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+
+.Logo.Jaro {
+    text-align: center;
+}
+
+.Logo.Jaro a img {
+    width: 60%;
+}
+
+.Login_Desciption h4 {
+    font-size: 26px;
+    color: #666666;
+    font-family: "Roboto";
+    font-weight: 300;
+    margin: 0;
+}
+
+.Login_Desciption {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-group.ca {
+    display: flex !important;
+}
+
+.form-group.ca img {
+    border-bottom: 1px solid #666666;
+    padding: 8px !important;
+}
+
+#id_username,
+#id_password {
+    border: none !important;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 1px solid #666 !important;
+    width: 100%;
+    padding: 6px 0px 0px 10px !important;
+}
+
+.Login_Sub {
+    padding: 10px 0;
+}
+
+button#btnLogin {
+    width: 100%;
+    font-size: 16px;
+    background-color: #fdaa28;
+    box-shadow: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+.Login_Desciption span {
+    color: #fdaa28;
+    font-size: 26px;
+}
+
+#sidebar {
+    width: 20%;
+    float: left;
+    display: inline-block;
+    height: 100vh;
+    position: fixed;
+}
+
+#content {
+    width: 80%;
+    display: inline-block;
+    float: right;
+}
+
+.main-container::after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+.leftsidebar {
+    background-color: black;
+}
+
+.Logo_Sidebar img {
+    width: 50% !important;
+}
+
+.leftsidebar .menu .list a span {
+    color: #fff;
+    font-size: 13px;
+}
+
+a {
+    outline: none !important;
+    text-decoration: none;
+}
+
+.Logo_Sidebar {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.leftsidebar .menu .list a {
+    display: inline-flex;
+    width: 100%;
+    padding: 13px 25px;
+    text-decoration: none;
+}
+
+.list li {
+    cursor: pointer;
+}
+
+.menu-text {
+    padding-left: 20px;
+}
+
+ul.list li:hover {
+    background: #fdaa28 !important;
+}
+
+.navbar-user {
+    background-color: #EEE;
+    padding: 5px;
+}
+
+.fa-user-tie::before {
+    content: "\f508";
+}
+
+.navbar-user a {
+    display: inline-block;
+}
+
+.logout {
+    float: right;
+}
+
+.User_Add {
+    color: #666666;
+}
+
+.user-list thead tr th {
+    text-align: left;
+}
+
+.user-list {
+    width: 100%;
+}
+
+.pageTitle .title {
+    display: inline-block;
+}
+
+.pageTitle .btn {
+    float: right;
+    display: inline-block;
+}
+
+.pageTitle .title span {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.pageTitle {
+    padding: 0 30px;
+    font-family: 'Roboto';
+}
+
+.pageData2 {
+    padding: 10px 30px;
+}
+
+.pageTitle .btn button {
+    background-color: #fdaa28;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 21px;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+}
+
+.pageTitle .btn button::after {
+    content: '\f105';
+    font-family: FontAwesome;
+    margin-left: 10px;
+}
+
+.list-table {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.list-table thead tr {
+    text-align: left;
+}
+
+.pageData {
+    padding: 0 30px;
+}
+
+.step-links a {
+    background-color: #fdaa28;
+    padding: 4px 10px;
+    border-radius: 14px;
+    color: #fff;
+}
+
+.list-table thead tr th {
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.list-table-container {
+    box-shadow: 0px 0px 10px -5px rgba(102, 102, 102, 1);
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px 20px;
+    overflow: auto;
+    width: 100%;
+}
+
+.table-container {
+    box-shadow: 0px 0px 10px -5px rgba(102, 102, 102, 1);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow-y: scroll;
+    height: 390px;
+}
+
+.pagination {
+    text-align: center;
+    float: right;
+    margin: 0 !important;
+}
+
+.user-form {
+    padding: 20px;
+}
+
+label {
+    font-weight: unset !important;
+    text-transform: capitalize;
+    padding-left: 3px;
+    font-size: 13px;
+}
+
+.form-control {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.list-table-container .row {
+    margin-bottom: 20px;
+}
+
+.btn input {
+    background-color: #fdaa28;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 21px;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+}
+
+.user-form .list-table-container {
+    padding: 45px 32px;
+}
+
+.ifilter {
+    border-radius: 2px;
+    border: 1px solid #6c757d;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 3px 9px;
+}
+
+.table-block {
+    width: 100%;
+}
+
+.table-block tr td {
+    padding: 6px;
+}
+
+#hidedata {
+    visibility: hidden;
+    height: 0;
+}
+
+.submit-btn {
+    background-color: #fdaa28;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 21px;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+}
+
+.list-table thead tr th {
+    padding: 8px 8px;
+    vertical-align: top;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.list-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.list-table td {
+    font-size: 13px;
+    padding: 8px;
+    vertical-align: top;
+}
+
+.User_Add span i {
+    font-size: 30px;
+    margin-right: 8px;
+}
+
+.fa.fa-power-off {
+    color: #666;
+    font-size: 19px;
+}
+
+.list-table thead {
+    background-color: #000;
+    ;
+}
+
+.submit-block {
+    text-align: center;
+}
+
+.filter-form {
+    display: block;
+}
+
+.filter-btn {
+    background-color: #fdaa28;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 21px;
+    font-size: 13px;
+    border: none;
+    border-radius: 7px;
+}
+
+.filter-form {
+    box-shadow: 0px 0px 10px -5px rgba(102, 102, 102, 1);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px;
+    border: 2px solid #fdaa28;
+    margin-top: 5px;
+}
+
+.ftab button {
+    border: 2px solid #fdaa28;
+    background-color: #fdaa28;
+    border-radius: 12px;
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+.ftab {
+    display: inline;
+}
+
+.import-export {
+    display: inline;
+}
+
+.default {
+    background-color: #fdaa28;
+    cursor: pointer;
+    color: #fff;
+    padding: 9px 21px;
+    font-size: 13px;
+    border: none;
+    border-radius: 25px;
+}
+
+.download-csv {
+    margin-left: 16px;
+}
+
+.list-table thead {
+    position: sticky;
+    top: 0;
+}
+
+.block1 {
+    margin-bottom: 10px;
+}
+
+.pagination2 {
+    padding: 0 30px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.password_change_block .row {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.login_base_body {
+    background: #fdaa28;
+}
+
+.loginFormContainer2 {
+    width: 60%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px 0px 20px 0px;
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    margin: 10% auto;
+}
+
+#btnLogin2 {
+    font-size: 16px;
+    background-color: #fdaa28;
+    box-shadow: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 10px 30px;
+    margin-top: 11px;
+}
+
+.reset_pw {
+    text-align: center;
+}
+
+.reset_pw p {
+    font-size: 15px;
+}
+
+.thankyou-block h1 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.reset_pw2 {
+    margin-top: 30px;
+}
+
+.reset_pw2 p {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.alert.alert-error ul li a {
+    color: red !important;
+}
+
+.alert.alert-error {
+    background-color: #FFE0E0;
+    color: red;
+}
+
+.pw_reset_error div div ul li {
+    list-style-position: inside;
+}
+
+.pw_reset_error {
+    background-color: #FFE0E0;
+    color: red;
+    padding: 10px;
+    border-radius: .25rem;
+}
+
+.pw_reset_p {
+    margin-bottom: 0 !important;
+}
+
+.submit-row {
+    text-align: center;
+}
+
+.password-input {
+    margin: 10px auto;
+    padding: 6px 17px;
+    border-radius: 25px;
+    border: 1px solid #FDAA28;
+}
+
+.password-input::placeholder {
+    text-align: center;
+}
+
+.dashboardInnerContainer {
+    width: 100%;
+    padding: 15px;
+    height: 100px;
+    background: #fdaa28 !important;
+    color: #ffffff;
+}
+
+.col-md-4.dashboardOuterContainer a {
+    text-decoration: none;
+}
+
+.text-left p {
+    font-size: 18px;
+}

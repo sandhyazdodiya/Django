@@ -1,0 +1,121 @@
+{% extends 'admin/change_list.html' %}{% block object-tools %}
+
+<div>
+
+    <form>
+        <table>
+            <tr>
+                <td><label class="input-label">first name</label></td>
+                <td><label class="input-label">last name</label></td>
+                <td><label class="input-label">phone</label></td>
+                <td><label class="input-label">email</label></td>
+                <td><label class="input-label">DOC #</label></td>
+                <td><label class="input-label">correctional facility</label></td>
+            </tr>
+            <tr>
+                <td> <input type="text" name="first_name" id="firstname"></td>
+                <td> <input type="text" name="last_name" id="lastname"></td>
+                <td> <input type="text" name="phone" id="phone"></td>
+                <td> <input type="text" name="email" id="email"></td>
+                <td> <input type="number" name="doc_no" id="docNo"></td>
+                <td> <input type="text" name="correctional_facility" id="correctionalFacility"></td>
+            </tr>
+
+
+            <tr>
+                <td><label class="input-label">home address</label></td>
+                <td><label class="input-label">city</label></td>
+                <td><label class="input-label">state</label></td>
+                <td><label class="input-label">zip code</label></td>
+
+            </tr>
+            <tr>
+                <td> <input type="text" name="home_address" id="homeAddress"></td>
+                <td> <input type="text" name="city" id="city"></td>
+                <td> <input type="text" name="state" id="state"></td>
+                <td> <input type="text" name="zip_code" id="zipCode"></td>
+
+            </tr>
+            <tr>
+                <td><label class="input-label">education</label></td>
+                <td><label class="input-label">certificate</label></td>
+                <td><label class="input-label">work area</label></td>
+            </tr>
+            <tr>
+                <td> <select id="education">
+                    <option value="">Select one </option>
+                       <option value="GED">GED</option>
+                       <option value="High School Diploma">High School Diploma</option>
+                       <option value="College Degree">College Degree</option>
+                 </select>
+                </td>
+                <td> <select name="certificate" id="certificate" multiple>
+                   
+                    <option value="HVAC">HVAC</option>
+                    <option value="CDL">CDL</option>
+                    <option value="Heavy Equipment">Heavy Equipment</option>
+                    <option value="Forklift">Forklift</option>
+                    <option value="Flagger">Flagger</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Masonry/Concrete">Masonry/Concrete</option>
+                    <option value="Construction">Construction</option>
+                    <option value="General Labor">General Labor</option>
+                    <option value="Supervisor">Supervisor</option>
+                    <option value="Other">Other</option>
+                   
+                  </select></td>
+                <td> <select name="work_area" id="workArea" multiple>
+                
+                      <option value="Metro Denver">Metro Denver</option>
+                      <option value="Western Slope">Western Slope</option>
+                      <option value="Eastern Colorado">Eastern Colorado</option>
+                      <option value="Southern Colorado">Southern Colorado</option>
+                      <option value="Nothern Colorado">Nothern Colorado</option>
+                      <option value="No Restrictions">No Restrictions</option>
+                      <option value="Arkansas">Arkansas </option>
+                      <option value="Montana">Montana</option>
+                      <option value="North Dakota">North Dakota</option>
+                      <option value="South Dakota">South Dakota</option>
+                      <option value="Utah">Utah</option>
+                      <option value="Wyoming">Wyoming</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label class="input-label">job status</label></td>
+                <td><label class="input-label">Hired date From</label></td>
+                <td><label class="input-label">Hired date To</label></td>
+                <!-- <td><label class="input-label">created date</label></td>
+                <td><label class="input-label">updated date</label></td> -->
+                <td></td>
+            </tr>
+            <tr>
+                <td> <select id="job_status">
+                    <option value="">All</option>
+                    <option value="1">Hired</option>
+                    <option value="0">Not hired</option>
+                   
+                  </select></td>
+                <td> <input type="date" name="hired_date__range__gte" id="hiredDateFrom"></td>
+                <td> <input type="date" name="hired_date__range__lte" id="hiredDateTo"></td>
+                <!-- <td> <input type="date" name="created_date" id="createdDate"></td>
+                <td> <input type="date" name="updated_date" id="updatedDate"></td> -->
+                <td> <a href="#" id="form-submit">Submit</a></td>
+
+            </tr>
+        </table>
+
+
+
+    </form>
+    <form id="send" action="" method="get">
+    </form>
+</div>
+<div class="import-export-btn">{% include "admin/import_export/change_list_import_item.html" %} </div>
+<div class="import-export-btn"> {% include "admin/import_export/change_list_export_item.html" %}</div>
+
+<div class="download-template"><a href="/static/csv/example.csv">Download CSV Template</a></div>
+
+
+<br /> {{ block.super }}{% endblock %}

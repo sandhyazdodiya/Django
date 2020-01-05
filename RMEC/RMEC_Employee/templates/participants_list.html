@@ -1,0 +1,240 @@
+{% extends 'base.html' %} {% load custom_tags %}{% block title %}RMEC Participants{% endblock %}{% block content %}
+<div class="pageTitle">
+    <div class="title">
+        <span>RMEC Participants</span>
+    </div>
+    <div class="btn">
+        <a href="{% url 'participants_add' %}"><button>ADD PARTICIPANTS
+        </button>
+        </a>
+    </div>
+</div>
+
+
+<div class="pageData">
+
+    <div class="fblock"><button class="filter-btn"><i class="fa fa-filter" aria-hidden="true"></i> &nbsp;&nbsp;Filter</i>
+    </button></div>
+    <div class="ftab"> {% if last_name_input %} Last Name: {{last_name_input}}<button class="lastname">
+            <span class="remove">x</span> 
+            </button> {% endif %}</div>
+    <div class="ftab"> {% if first_name_input %} First Name:{{first_name_input}}<button class="firstname">
+         <span class="remove">x</span> 
+         </button> {% endif %}</div>
+    <div class="ftab"> {% if phone_input %} Phone: {{phone_input}}<button class="phone">
+                <span class="remove">x</span> 
+                </button> {% endif %}</div>
+    <div class="ftab"> {% if email_input %} Email:{{email_input}}<button class="email">
+                        <span class="remove">x</span> 
+                        </button> {% endif %}</div>
+    <div class="ftab"> {% if doc_no_input %} DOC #: {{doc_no_input}}<button class="docNo">
+                     <span class="remove">x</span> 
+                  </button> {% endif %}</div>
+    <div class="ftab"> {% if home_address_input %} Home Address : {{home_address_input}}<button class="homeAddress">
+                        <span class="remove">x</span> 
+                     </button> {% endif %}</div>
+    <div class="ftab"> {% if city_input %} City : {{city_input}}<button class="city">
+                        <span class="remove">x</span> 
+                         </button> {% endif %}</div>
+    <div class="ftab"> {% if state_input %} State : {{state_input}}<button class="state">
+                                <span class="remove">x</span> 
+                                 </button> {% endif %}</div>
+    <div class="ftab"> {% if zip_code_input %} Zip Code : {{zip_code_input}}<button class="zipCode">
+                                  <span class="remove">x</span> 
+                                   </button> {% endif %}</div>
+    <div class="ftab"> {% if correctional_facility_input %} Correctional Facility : {{correctional_facility_input}}<button class="correctionalFacility">
+                                    <span class="remove">x</span> 
+                                     </button> {% endif %}</div>
+
+
+    <div class="filter-form">
+        <form method="GET" class="add_from">
+            <table class="table-block">
+                <tr>
+
+                    <td><label class="input-label">last name</label></td>
+                    <td><label class="input-label">first name</label></td>
+                    <td><label class="input-label">phone</label></td>
+                    <td><label class="input-label">email</label></td>
+                    <td><label class="input-label">DOC #</label></td>
+                </tr>
+                <tr>
+
+                    <td> <input type="text" name="last_name" id="lastname" class="ifilter" value="{{last_name_input}}"></td>
+                    <td> <input type="text" name="first_name" id="firstname" class="ifilter" value="{{first_name_input}}"></td>
+                    <td> <input type="text" name="phone" id="phone" class="ifilter" value="{{phone_input}}"></td>
+                    <td> <input type="text" name="email" id="email" class="ifilter" value="{{email_input}}"></td>
+                    <td> <input type="text" name="doc_no" id="docNo" class="ifilter" value="{{doc_no_input}}"></td>
+
+                </tr>
+
+
+                <tr>
+                    <td><label class="input-label">home address</label></td>
+                    <td><label class="input-label">city</label></td>
+                    <td><label class="input-label">state</label></td>
+                    <td><label class="input-label">zip code</label></td>
+                    <td><label class="input-label">correctional facility</label></td>
+
+                </tr>
+                <tr>
+                    <td> <input type="text" name="home_address" id="homeAddress" class="ifilter" value="{{home_address_input}}"></td>
+                    <td> <input type="text" name="city" id="city" class="ifilter" value="{{city_input}}"></td>
+                    <td> <input type="text" name="state" id="state" class="ifilter" value="{{state_input}}"></td>
+                    <td> <input type="text" name="zip_code" id="zipCode" class="ifilter" value="{{zip_code_input}}"></td>
+                    <td> <input type="text" name="correctional_facility" id="correctionalFacility" class="ifilter" value="{{correctional_facility_input}}"></td>
+
+                </tr>
+                <tr>
+                    <td><label class="input-label">education</label></td>
+                    <td><label class="input-label">certificate</label></td>
+                    <td><label class="input-label">work area</label></td>
+                    <td><label class="input-label">ishired</label></td>
+                    <td><label class="input-label">Hired date From</label></td>
+                    <td><label class="input-label">Hired date To</label></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="education" id="education" multiple class="ifilter1" value="{{education_input}}">
+                     <option value="">ALL(Select More Than 1) </option>
+                        <option value="GED">GED</option>
+                        <option value="HIGH SCHOOL DIPLOMA">HIGH SCHOOL DIPLOMA</option>
+                        <option value="COLLEGE DEGREE">COLLEGE DEGREE</option>
+                       
+                      </select>
+                    </td>
+                    <td>
+                        <select name="certificate[]" id="certificate" multiple class="ifilter1"> 
+                             <option value="">ALL(Select More Than 1) </option>
+                               <option value="HVAC">HVAC</option>
+                               <option value="CDL">CDL</option>
+                               <option value="Heavy Equipment">Heavy Equipment</option>
+                               <option value="Forklift">Forklift</option>
+                               <option value="Flagger">Flagger</option>
+                               <option value="Electrical">Electrical</option>
+                               <option value="Plumbing">Plumbing</option>
+                               <option value="Masonry/Concrete">Masonry/Concrete</option>
+                               <option value="Construction">Construction</option>
+                               <option value="General Labor">General Labor</option>
+                               <option value="Supervisor">Supervisor</option>
+                               <option value="Other">Other</option>
+                         </select>
+
+                    </td>
+                    <td>
+                        <select name="work_area[]" id="workArea" multiple class="ifilter1">
+                            <option value="">ALL(Select More Than 1) </option>
+                              <option value="Metro Denver">Metro Denver</option>
+                              <option value="Western Slop">Western Slop</option>
+                              <option value="Eastern Colorado">Eastern Colorado</option>
+                              <option value="Southern Colorado">Southern Colorado</option>
+                              <option value="Nothern Colorado">Nothern Colorado</option>
+                              <option value="No Restrictions">No Restrictions</option>
+                       </select>
+
+                    </td>
+                    <td>
+                        <select name="job_status" id="ishired" class="ifilter1">
+                        <option value="">All</option>
+                        <option value="1">Hired</option>
+                        <option value="0">Not hired</option>
+                       
+                      </select></td>
+                    <td> <input type="date" name="hired_date_gt" id="hiredDateFrom" class="ifilter1" value="{{hired_date_gt_input}}"></td>
+                    <td> <input type="date" name="hired_date_lt" id="hiredDateTo" class="ifilter1" value="{{hired_date_lt_input}}"></td>
+                </tr>
+
+
+
+            </table>
+
+            <div class="submit-block"> <button type="submit" id="submit-form" class="submit-btn">SUBMIT</button></div>
+
+        </form>
+    </div>
+</div>
+<div class="pageData2">
+    <div class="import-export">
+        <a href="/admin/RMEC_Employee/rmec_employee/import/"><button class="submit-btn">Import</button>
+            
+        </a>
+        <a href="{% url 'export_data_template' %}"><button class="submit-btn">Export
+            </button>
+            </a>
+        <a href="/static/csv/example.csv" class="download-csv">Download CSV Template</a>
+    </div>
+    <div class="pagination">
+        <span class="step-links ">
+            {% if participantss.has_previous %}
+           
+                <a href="?{% url_replace request 'page' participantss.previous_page_number %}" class="link1"><i class="fa fa-angle-left"></i></a>
+            {% endif %}
+    
+            <span class="current">
+                Page {{ participantss.number }} of {{ participantss.paginator.num_pages }}.
+            </span> {% if participantss.has_next %}
+        <a href="?{% url_replace request 'page' participantss.next_page_number %}" class="link2"><i class="fa fa-angle-right"></i></a> {% endif %}
+        </span>
+    </div>
+</div>
+<div class="pageData">
+    <div class="table-container" id="t-height">
+        <table class="list-table" cellspacing="0" cellpadding="4">
+            <thead class="">
+                <tr>
+                    <th>Action</th>
+                    <th>last name </th>
+                    <th>first name </th>
+                    <th>doc no</th>
+                    <th>correctional facility </th>
+
+                    <th>home address </th>
+                    <th>city </th>
+
+                    <th>state </th>
+                    <th>zip code</th>
+
+                    <th>phone</th>
+                    <th>email </th>
+
+                    <th>education </th>
+                    <th>certificate </th>
+
+                    <th>work area </th>
+                    <th>job status </th>
+                    <th>hired date</th>
+                    <!-- <th>created date</th>
+                    <th>updated date </th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for participants in participantss %}
+                <tr>
+
+                    <td><a href="{% url 'RMEC_Employee_confirm_delete' participants.id %}"><i class="fa fa-trash-o"></i></a></td>
+                    <td><a href="{% url 'participants_update' participants.id %}">{{ participants.last_name }}</a></td>
+                    <td>{{ participants.first_name }}</td>
+                    <td>{{ participants.doc_no }}</td>
+                    <td>{{ participants.correctional_facility }}</td>
+                    <td>{{ participants.home_address }}</td>
+                    <td>{{ participants.city }}</td>
+                    <td>{{ participants.state }}</td>
+                    <td>{{ participants.zip_code }}</td>
+                    <td>{{ participants.phone }}</td>
+                    <td>{{ participants.email }}</td>
+                    <td>{{ participants.education }}</td>
+                    <td>{{ participants.certificate }}</td>
+                    <td>{{ participants.work_area }}</td>
+                    <td>{{ participants.job_status }}</td>
+                    <td>{{ participants.hired_date }}</td>
+                    <!-- <td>{{ participants.created_date }}</td>
+                    <td>{{ participants.updated_date }}</td> -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+    </div>
+
+    {% endblock %}
